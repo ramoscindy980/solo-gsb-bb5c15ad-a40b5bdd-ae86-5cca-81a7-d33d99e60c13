@@ -1,0 +1,8 @@
+services:
+  subtitle-calibrator:
+    build: .
+    image: subtitle-calibrator:latest
+    container_name: subtitle-calibrator
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    restart: unless-stopped
